@@ -18,10 +18,13 @@ To test your outgoing email, run this:
 Put the included files in your user's Documents directory, in a folder called eqmac-notify.
 For clarification, the .sh file's complete path should be /Users/$USER/Documents/eqmac-notify/eqmac-notify.sh
 
+Open the eqmac-notify.sh file in a text editor.
+Change the character="Yourcharacter" line to your actual character's name.
+Change the address="emailaddress@domain.com" to your actual email address.
+
 In a terminal, run the following (note, the $ is an indication of a regular user's prompt, there is no need to type the $):
   
-  $ cd ~/Documents/eqmac-notify
+  (Note, this will overwrite your current crontab.  To see your current crontab, run crontab -l)
   
-  $ crontab ./crontab
+  $ crontab ~/Documents/eqmac-notify/crontab
   
-  $ chmod u+x ./eqmac-notify.sh
