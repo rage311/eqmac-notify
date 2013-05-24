@@ -1,1 +1,2 @@
+#This runs it every 5 minutes
 */5	*	*	*	*	~/Documents/eqmac-notify/eqmac-notify.sh

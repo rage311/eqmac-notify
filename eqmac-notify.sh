@@ -10,12 +10,14 @@ character="Yourcharacter"
 #Email address that you want the notifications to be sent to
 address="emailaddress@domain.com"
 
+#This section notifies you of bazaar sales
 bazlines=`cat "$workingdir/bzrlog_52_$character.txt" | grep -v -F --file="$workingdir/bzrlog_pattern_$character.txt" | grep purchased | grep -v buyer`
 if [ `echo $bazlines | wc -w` -gt 0 ]; then
     echo $bazlines | mail -s "Bazaar sale" $address;
 fi
 cat "$workingdir/bzrlog_52_$character.txt" > "$workingdir/bzrlog_pattern_$character.txt"
 
+#This section notifies you when EQ is no longer running
 if [ `ps -Af | grep -i everquest | grep -v grep | wc -l` -lt 1 ]; then
     if [ `cat ./crash_email_sent.txt | grep 1 | wc -l` -lt 1 ]; then
 	echo "Everquest is not running" | mail -s "EQ Crashed" $address;
