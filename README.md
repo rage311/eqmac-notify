@@ -4,6 +4,8 @@ eqmac-notify
 Scripts to run in the background and notify you via email of happenings in your EQ Mac client.
 
 
+Note: this is designed to run in OS X with the native client...
+
 First, you will need to set postfix up to send email properly.
 This guide is a perfect walkthrough if you will be using gmail to send your notification emails:
 http://www.anujgakhar.com/2011/12/09/using-macosx-lion-command-line-mail-with-gmail-as-smtp/
